@@ -20,7 +20,7 @@ const headers= new Headers({'Content-Type':'application/json'});
  const token = localStorage.getItem('token')
             ? '?token=' + localStorage.getItem('token')
             : '';
-return this.http.post('http://localhost:3000/comment'+token,body,{headers:headers})
+return this.http.post(' https://yelpapt.herokuapp.com/comment'+token,body,{headers:headers})
 .map((response:Response)=>{
     const result=response.json();
     const comment=new CommentModel(
@@ -39,7 +39,7 @@ return this.http.post('http://localhost:3000/comment'+token,body,{headers:header
 
 
 getComments(){
-    return this.http.get('http://localhost:3000/comment')
+    return this.http.get(' https://yelpapt.herokuapp.com/comment')
      .map((response:Response)=>{
          const comments=response.json().obj;
          let transformedComments:CommentModel[]=[];

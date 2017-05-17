@@ -13,7 +13,7 @@ var commentRoutes=require('./routes/comment');
 
 var app = express();
 // mongoose.connect('localhost:27017/yelpapt');
-mongoose.connect('mongodb://nikhil:goku@ds143141.mlab.com:43141/yelpapt');
+mongoose.connect('nikhil:goku@ds143141.mlab.com:43141/yelpapt');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

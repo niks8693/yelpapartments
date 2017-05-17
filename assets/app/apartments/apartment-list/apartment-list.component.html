@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12">
+       
+        <div class="jumbotron">
+            
+            <h1>Welcome to Yelp Apartments</h1>
+            <p>View your next Dream Apartment...</p>
+            <button type="button" class="btn btn-primary" routerLink="/apartments/new">Add new Apartment</button>
+        </div><!--jumbotron-->
+    </div><!--col-->
+</div> <!--- row-->
+<div class="row">
+    <app-apartment *ngFor="let apartmentEl of apartments;let i=index;"
+    [apartment]="apartmentEl" [index]="i"></app-apartment>
+    
+</div>

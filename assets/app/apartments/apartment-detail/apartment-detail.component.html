@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="thumbnail">
+            <img src="{{apartment.imagePath}}" 
+            alt="{{apartment.title}}" width="100%" >
+            <div class="caption">
+                <h1><a href="{{apartment.link}}">{{apartment.title}}</a><span class="pull-right">${{apartment.price}}/month</span></h1>
+                <p>{{apartment.description}}</p>
+                <p>Submitted by {{apartment.username}}</p>
+
+                <button type="button" routerLink="edit" class="btn btn-warning">Edit</button>
+                <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+
+                
+            </div><!--caption-->
+        </div><!--thumbnail-->
+    </div><!--col-->
+</div><!--row-->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="well well-lg">
+            <button type="button" class="btn btn-info" routerLink="comments/new">Add a Review</button>
+       <div style="padding:10px;">
+           <router-outlet></router-outlet>
+       </div>
+            <div style="padding:10px;">
+                <app-comment-list></app-comment-list>
+            </div>
+            
+        </div>
+    </div>
+</div>
